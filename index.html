@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+    body {
+      margin: 0;
+      background: url(https://criticalhits.com.br/wp-content/uploads/2022/03/tanjiro-1536x865.jpg) center/cover no-repeat fixed;
+      height: 100vh;
+    }
+    .texto-com-borda {
+      color: white;
+      border: 2px solid black;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .botao-do-tanjiro {
+      background-image: url('https://uploads.spiritfanfiction.com/historias/capas/202012/promessa-imagine-tanjiro-kamado-21323475-251220200501.jpg');
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      border: 2px solid black;
+      padding: 3px;
+    }
+    .botao-do-zenitsu {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXCj5jQUnFoa3ojVPhA1pVZZM35mTkhXf5kQ&usqp=CAU');
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      border: 2px solid black;
+      padding: 3px;
+    }
+    .botao-do-inosuke {
+      background-image: url('https://www.nautiljon.com/images/perso/00/29/mini/hashibira_inosuke_18392.webp?11687107673');
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      border: 2px solid black;
+      padding: 3px;
+    }
+    .botao-da-nezuko {
+      background-image: url('https://images4.alphacoders.com/131/thumbbig-1314559.webp');
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      border: 2px solid black;
+      padding: 3px;
+    }
+  </style>
+</head>
+<body>
+  <p class="texto-com-borda">Tanjiro Kamado é o corajoso protagonista de "Kimetsu no Yaiba", com sua aparência gentil e olhos castanhos que escondem uma determinação inabalável. Sua jornada, marcada por resiliência, leva-o de um jovem amoroso a um habilidoso Caçador de Demônios com uma espada nichirin que muda de cor ao entrar em contato com o sangue demoníaco. Sua personalidade compassiva o guia na busca pela vingança pela transformação de sua irmã Nezuko em um demônio, enquanto desvenda segredos sobre sua própria linhagem. A trajetória de Tanjiro é uma emocionante jornada de autodescoberta, força de vontade e amadurecimento, mantendo-o como um ícone central na história de "Demon Slayer".</p>
+
+  <button class="botao-do-tanjiro" onclick="resetarImagemELegenda()">Tanjiro</button><br>
+  
+  <button class="botao-do-zenitsu" onclick="trocarImagemELegenda()">Zenitsu</button><br>
+
+  <button class="botao-do-inosuke" onclick="mudarImagemELegenda()">Inosuke</button><br>
+  <button class="botao-da-nezuko" onclick="inverterImagemELegenda()">Nezuko</button>
+
+  <script>
+    var imagemOriginal = 'https://criticalhits.com.br/wp-content/uploads/2022/03/tanjiro-1536x865.jpg';
+    var legendaOriginal = 'Tanjiro Kamado é o corajoso protagonista de "Kimetsu no Yaiba", com sua aparência gentil e olhos castanhos que escondem uma determinação inabalável. Sua jornada, marcada por resiliência, leva-o de um jovem amoroso a um habilidoso Caçador de Demônios com uma espada nichirin que muda de cor ao entrar em contato com o sangue demoníaco. Sua personalidade compassiva o guia na busca pela vingança pela transformação de sua irmã Nezuko em um demônio, enquanto desvenda segredos sobre sua própria linhagem. A trajetória de Tanjiro é uma emocionante jornada de autodescoberta, força de vontade e amadurecimento, mantendo-o como um ícone central na história de "Demon Slayer".';
+    var botaoTanjiro = document.querySelector(".botao-do-tanjiro");
+    var botaoZenitsu = document.querySelector(".botao-do-zenitsu");
+    var botaoInosuke = document.querySelector(".botao-do-inosuke");
+    var botaoNezuko = document.querySelector(".botao-da-nezuko");
+    var texto = document.querySelector(".texto-com-borda");
+
+    function trocarImagemELegenda() {
+      document.body.style.backgroundImage = 'url(https://animes.olanerd.com/wp-content/uploads/2022/09/Signo-e-personalidade-de-Zenitsu-Agatsuma.jpg?q=50&fit=crop&dpr=1.5)';
+      texto.innerText = 'Zenitsu Agatsuma, com seu cabelo amarelo e covardia notória, é um Caçador de Demônios talentoso, usando a "Respiração do Trovão" em suas lutas ao lado de Tanjiro e Inosuke. Sua jornada é marcada por um desenvolvimento significativo, passando de um covarde relutante para um guerreiro corajoso. Zenitsu, com sua personalidade única e laços estreitos com seus companheiros, acrescenta uma combinação de comédia e ação à história, tornando-o um membro essencial e cativante do grupo de Caçadores de Demônios.';
+    }
+
+    function resetarImagemELegenda() {
+      document.body.style.backgroundImage = 'url('+imagemOriginal+')';
+      texto.innerText = legendaOriginal;
+    }
+
+    function mudarImagemELegenda() {
+      document.body.style.backgroundImage = 'url(https://i0.wp.com/animebox.net/wp-content/uploads/2023/03/1679868391_810_Os-melhores-ataques-e-habilidades-de-Inosuke.jpg?resize=640%2C320&ssl=1)';
+      texto.innerText = 'Inosuke Hashibira é um personagem icônico de "Kimetsu no Yaiba", conhecido por sua aparência selvagem, cabelo espetado e máscara de javali. Ele é um guerreiro destemido que utiliza a "Respiração da Besta" em suas batalhas, demonstrando uma força bruta e instinto animal. Inosuke, apesar de seu comportamento rude e temperamental, revela um coração leal e uma profunda amizade por Tanjiro e Zenitsu, formando um trio improvável e poderoso de Caçadores de Demônios. Sua presença na série adiciona uma dose de excitação e humor, tornando-o um personagem querido entre os fãs.';
+    }
+
+    function inverterImagemELegenda() {
+      document.body.style.backgroundImage = 'url(https://scontent.fcgh47-1.fna.fbcdn.net/v/t1.6435-9/117817563_183953073247751_6518196430316624012_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=973b4a&_nc_ohc=lXz6GLitzNoAX-15q28&_nc_ht=scontent.fcgh47-1.fna&oh=00_AfAgTm4byTgKwyZere85wwX51ZMA-5DJ1h9V-oaxHWumxQ&oe=65451CAC)';
+      texto.innerText = 'Nezuko Kamado é a irmã mais nova de Tanjiro e um personagem central em "Kimetsu no Yaiba". Ela foi transformada em um demônio, mantendo sua aparência angelical, com cabelos negros e olhos avermelhados. Nezuko possui incríveis habilidades de combate e é uma aliada leal de seu irmão, lutando para controlar seus instintos demoníacos enquanto busca uma cura para sua condição. Sua determinação, força e relação próxima com Tanjiro a tornam uma figura tocante e cativante na história.';
+    }
+  </script>
+</body>
+</html>
